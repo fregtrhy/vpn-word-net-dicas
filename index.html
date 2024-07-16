@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Dicas e Informações</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            overflow: hidden; /* Oculta o texto que transborda */
+        }
+
+        header h1 {
+            position: relative; /* Necessário para animação */
+            animation-duration: 1s; /* Duração da animação */
+            animation-fill-mode: forwards; /* Mantém o estado final da animação */
+        }
+
+        @keyframes slideTitleIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideTitleOut {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .topic {
+            background-color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .download-icon {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .download-icon i {
+            margin-right: 8px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Nosso App</h1>
+    </header>
+    <main>
+        <section id="topics">
+            <div class="topic">
+                <h2>COMPARTILHAR INTERNET SEM USB PARTE 1</h2>
+                <div class="video-container">
+                    <iframe src="https://player.vimeo.com/video/984617839" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>
+                    1: Conectar em nosso app VPN WORD NET<br><br>
+                    2: Ligar seu roteador coloque uma senha e nome qualquer<br><br>
+                    3: Abra app WORD NET PROXY, marque a caixinha sem root e clique em iniciar, vai aparecer os números de IP. Pegue o último. Se não funcionar, teste o outro número de IP.<br><br>
+                    4: Veja parte 2
+                </p>
+                <a href="link_para_seu_arquivo.pdf" download class="download-icon">
+                    <i class="fa fa-download"></i> Baixar Instruções
+                </a>
+            </div>
+            <div class="topic">
+                <h2>COMPARTILHAR INTERNET SEM USB PARTE 2</h2>
+                <div class="video-container">
+                    <iframe src="https://player.vimeo.com/video/984617839" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>
+                    1: Abra seu Wi-Fi em seu "pc, notebook" pesquise por seu Wi-Fi nome que você criou em seu celular e coloque a senha que você criou.<br><br>
+                    2: Em seu "pc, notebook" vá em configuração. Procure rede e internet, procure por proxy, agora procure a aba "usar um servidor proxy", agora coloque o servidor e porta do nosso WORDNET PROXY, dê um salvar e seja feliz!
+                </p>
+            </div>
+        </section>
+    </main>
+    <script>
+        // JavaScript para controlar a transição do título em loop
+        const header = document.querySelector('header h1');
+        const titles = ["Bem-vindo ao Nosso App", "VPN WORD NET nº 1 do Brasil", "Gostou da nossa internet? não esqueça de compartilhar"];
+        let currentIndex = 0;
+
+        function animateTitleOut() {
+            header.style.animationName = 'slideTitleOut';
+            setTimeout(() => {
+                header.textContent = titles[currentIndex];
+                animateTitleIn();
+            }, 1000); // Tempo para esperar antes de trocar o texto
+        }
+
+        function animateTitleIn() {
+            header.style.animationName = 'slideTitleIn';
+            currentIndex = (currentIndex + 1) % titles.length;
+            setTimeout(() => {
+                animateTitleOut();
+            }, 3000); // Tempo de exibição do título antes de trocar novamente
+        }
+
+        // Iniciar a animação
+        animateTitleOut();
+    </script>
+</body>
+</html>

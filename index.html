@@ -86,13 +86,23 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: #1d9b1c; /* Substitua #FF5733 pela cor desejada */
+            color: #4CAF50;
             font-size: 1.2em;
             margin-top: 20px;
+            transition: color 0.3s ease-in-out; /* Adiciona uma transição suave para a cor */
+        }
+
+        .download-icon:hover {
+            color: #FF5733; /* Substitua pela cor desejada ao passar o mouse */
         }
 
         .download-icon i {
             margin-right: 8px;
+            transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para o ícone */
+        }
+
+        .download-icon:hover i {
+            transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">

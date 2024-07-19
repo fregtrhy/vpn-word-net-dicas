@@ -21,13 +21,13 @@
             color: white;
             padding: 1em 0;
             text-align: center;
-            overflow: hidden;
+            overflow: hidden; /* Oculta o texto que transborda */
         }
 
         header h1 {
-            position: relative;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
+            position: relative; /* Necessário para animação */
+            animation-duration: 1s; /* Duração da animação */
+            animation-fill-mode: forwards; /* Mantém o estado final da animação */
         }
 
         @keyframes slideTitleIn {
@@ -89,20 +89,20 @@
             color: #4CAF50;
             font-size: 1.2em;
             margin-top: 20px;
-            transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out; /* Adiciona uma transição suave para a cor */
         }
 
         .download-icon:hover {
-            color: #FF5733;
+            color: #FF5733; /* Substitua pela cor desejada ao passar o mouse */
         }
 
         .download-icon i {
             margin-right: 8px;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para o ícone */
         }
 
         .download-icon:hover i {
-            transform: scale(1.2);
+            transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
         }
 
         footer {
@@ -117,36 +117,36 @@
 
         .icon-left, .icon-right, .icon-whatsapp {
             position: fixed;
-            width: 32px;
-            height: 32px;
-            fill: #0088cc;
+            width: 32px; /* Ajuste o tamanho conforme necessário */
+            height: 32px; /* Ajuste o tamanho conforme necessário */
+            fill: #0088cc; /* Cor padrão dos ícones do Telegram */
             left: 10px;
-            transition: transform 0.3s;
+            transition: transform 0.3s; /* Adiciona uma transição suave para a transformação */
         }
 
         .icon-left {
-            bottom: 150px;
+            bottom: 150px; /* Ajuste a posição conforme necessário */
         }
 
         .icon-right {
-            bottom: 100px;
+            bottom: 100px; /* Ajuste a posição conforme necessário */
         }
 
         .icon-whatsapp {
-            fill: #25D366;
-            bottom: 50px;
+            fill: #25D366; /* Cor verde padrão do WhatsApp */
+            bottom: 50px; /* Ajuste a posição conforme necessário */
         }
 
         .icon-left:hover, .icon-right:hover, .icon-whatsapp:hover {
-            transform: scale(1.2);
+            transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
         }
 
         .icon-left:hover, .icon-right:hover {
-            fill: #005f8c;
+            fill: #005f8c; /* Cor do ícone do Telegram ao passar o mouse */
         }
 
         .icon-whatsapp:hover {
-            fill: #128C7E;
+            fill: #128C7E; /* Cor do WhatsApp ao passar o mouse */
         }
 
         /* CSS para alerta personalizado */
@@ -161,20 +161,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             border-radius: 8px;
-            opacity: 0;
-            animation: fadeIn 0.5s forwards, fadeOut 0.5s forwards 4.5s;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeOut {
-            to {
-                opacity: 0;
-            }
         }
 
         .custom-alert p {
@@ -303,21 +289,19 @@
         }
 
         function closeCustomAlert() {
-            const alertBox = document.getElementById('customAlert');
-            alertBox.style.animation = 'fadeOut 0.5s forwards';
-            setTimeout(() => {
-                alertBox.style.display = 'none';
-            }, 500);
+            document.getElementById('customAlert').style.display = 'none';
+        }
+        // Animação de entrada e saída do título
+        const headerTitle = document.querySelector('header h1');
+        let isOriginalTitle = true;
+        
+        function animateTitle() {
+            headerTitle.style.animationName = isOriginalTitle ? 'slideTitleOut' : 'slideTitleIn';
+            isOriginalTitle = !isOriginalTitle;
         }
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const header = document.querySelector("header h1");
-            header.style.animationName = "slideTitleIn";
-
-            setTimeout(function() {
-                header.style.animationName = "slideTitleOut";
-            }, 5000);
-        });
+        // Troca os títulos a cada 3 segundos
+        setInterval(animateTitle, 3000);
     </script>
 </body>
 </html>

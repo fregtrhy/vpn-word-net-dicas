@@ -21,13 +21,13 @@
             color: white;
             padding: 1em 0;
             text-align: center;
-            overflow: hidden; /* Oculta o texto que transborda */
+            overflow: hidden;
         }
 
         header h1 {
-            position: relative; /* Necessário para animação */
-            animation-duration: 1s; /* Duração da animação */
-            animation-fill-mode: forwards; /* Mantém o estado final da animação */
+            position: relative;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
         }
 
         @keyframes slideTitleIn {
@@ -89,20 +89,20 @@
             color: #4CAF50;
             font-size: 1.2em;
             margin-top: 20px;
-            transition: color 0.3s ease-in-out; /* Adiciona uma transição suave para a cor */
+            transition: color 0.3s ease-in-out;
         }
 
         .download-icon:hover {
-            color: #FF5733; /* Substitua pela cor desejada ao passar o mouse */
+            color: #FF5733;
         }
 
         .download-icon i {
             margin-right: 8px;
-            transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para o ícone */
+            transition: transform 0.3s ease-in-out;
         }
 
         .download-icon:hover i {
-            transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+            transform: scale(1.2);
         }
 
         footer {
@@ -117,36 +117,36 @@
 
         .icon-left, .icon-right, .icon-whatsapp {
             position: fixed;
-            width: 32px; /* Ajuste o tamanho conforme necessário */
-            height: 32px; /* Ajuste o tamanho conforme necessário */
-            fill: #0088cc; /* Cor padrão dos ícones do Telegram */
+            width: 32px;
+            height: 32px;
+            fill: #0088cc;
             left: 10px;
-            transition: transform 0.3s; /* Adiciona uma transição suave para a transformação */
+            transition: transform 0.3s;
         }
 
         .icon-left {
-            bottom: 150px; /* Ajuste a posição conforme necessário */
+            bottom: 150px;
         }
 
         .icon-right {
-            bottom: 100px; /* Ajuste a posição conforme necessário */
+            bottom: 100px;
         }
 
         .icon-whatsapp {
-            fill: #25D366; /* Cor verde padrão do WhatsApp */
-            bottom: 50px; /* Ajuste a posição conforme necessário */
+            fill: #25D366;
+            bottom: 50px;
         }
 
         .icon-left:hover, .icon-right:hover, .icon-whatsapp:hover {
-            transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+            transform: scale(1.2);
         }
 
         .icon-left:hover, .icon-right:hover {
-            fill: #005f8c; /* Cor do ícone do Telegram ao passar o mouse */
+            fill: #005f8c;
         }
 
         .icon-whatsapp:hover {
-            fill: #128C7E; /* Cor do WhatsApp ao passar o mouse */
+            fill: #128C7E;
         }
 
         /* CSS para alerta personalizado */
@@ -161,6 +161,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             border-radius: 8px;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards, fadeOut 0.5s forwards 4.5s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+            }
         }
 
         .custom-alert p {
@@ -250,44 +264,24 @@
                     <iframe src="https://player.vimeo.com/video/984617839" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <p>
-                    1: Abra seu Wi-Fi..<br><br>
+                    1: Abra seu Wi-Fi.<br><br>
                     2: Abra seu Wi-Fi.
                 </p>
                 <a href="https://" download class="download-icon">
                     <i class="fa fa-download"></i> Baixar aplicativo vpn word net
                 </a>
                 <a href="https://" download class="download-icon">
-                    <i class="fa fa-download"></i> Baixar Aplicativo pdnet premium para celular
-                </a>
-            </div>
-            <div class="topic">
-                <h2>VOCÊ USAR VIVO PRÉ E NAO TEM NADA ATIVO OU NAO ESTA MAIS GERANDO DADOS? </h2>
-                <p>
-                    1: Abra seu Wi-Fi.<br><br>
-                    2: Abra seu Wi-Fi.
-                </p>
+                    <i class="fa fa-download"></i> Baixar Aplicativo wordnet proxy
                 </a>
             </div>
         </section>
     </main>
     <footer>
-        ⭐️ 𝗩𝗣𝗡 𝗪𝗢𝗥𝗗 𝗡𝗘𝗧™ 𝘁𝗼𝗱𝗼𝘀 𝗱𝗶𝗿𝗲𝗶𝘁𝗼𝘀 𝗿𝗲𝘀𝗲𝗿𝘃𝗮𝗱𝗼𝘀 © 𝟮𝟬𝟭𝟵-𝟮𝟬𝟮𝟰™
+        𝗡𝗘𝗧 ⭐️<br> 𝗗 𝗡𝗘𝗧®️ | 🚀 𝙋𝙀𝘿𝙍𝙊 𝙋𝙍𝙊𝙂𝙍𝘼𝙈𝘼𝘿𝙊𝙍 𝗧𝗘𝗖𝗛𝗡𝗢𝗟𝗢𝗚𝗬 © 🚀
     </footer>
-    <a href="https://t.me/seu_canal_telegram" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-telegram icon-left" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.678-.32c.252-.287.538-.635.785-.923q.502-.57 1.023-1.077c.241-.23.438-.389.623-.487.27-.138.534-.06.251.204-.401.38-.955.908-1.518 1.408-.101.087-.193.184-.289.287-.219.236-.444.474-.67.708-.452.466-.93.91-.935 1.464-.005.346.215.683.724.712.503.028.896-.196 1.256-.427a36.388 36.388 0 0 0 1.548-1.042q.597-.398 1.19-.8c.3-.202.69-.422.932-.73a1.252 1.252 0 0 0 .24-.813 1.1 1.1 0 0 0-.223-.61 1.013 1.013 0 0 0-.543-.402c-.38-.128-.81-.007-1.181.105z"/>
-        </svg>
-    </a>
-    <a href="https://t.me/seu_canal_telegram" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-telegram icon-right" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.678-.32c.252-.287.538-.635.785-.923q.502-.57 1.023-1.077c.241-.23.438-.389.623-.487.27-.138.534-.06.251.204-.401.38-.955.908-1.518 1.408-.101.087-.193.184-.289.287-.219.236-.444.474-.67.708-.452.466-.93.91-.935 1.464-.005.346.215.683.724.712.503.028.896-.196 1.256-.427a36.388 36.388 0 0 0 1.548-1.042q.597-.398 1.19-.8c.3-.202.69-.422.932-.73a1.252 1.252 0 0 0 .24-.813 1.1 1.1 0 0 0-.223-.61 1.013 1.013 0 0 0-.543-.402c-.38-.128-.81-.007-1.181.105z"/>
-        </svg>
-    </a>
-    <a href="https://api.whatsapp.com/send?phone=seu_numero_whatsapp" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="icon-whatsapp" viewBox="0 0 24 24">
-            <path d="M12.065 0C5.406 0 .004 5.402.004 12.062c0 2.12.55 4.175 1.6 6.005L0 24l6.07-1.573c1.77.962 3.736 1.468 5.764 1.468h.003C18.723 23.896 24 18.62 24 12.063 24 5.402 18.728 0 12.065 0zm6.592 17.487c-.273.772-1.387 1.417-1.896 1.501-.493.081-1.103.116-1.785-.11-.413-.132-.94-.31-1.614-.606-2.843-1.237-4.68-4.28-4.823-4.487-.14-.205-1.15-1.534-1.15-2.922s.728-2.073.985-2.354c.25-.273.548-.342.73-.342.178 0 .36.003.515.009.166.007.388-.062.61.47.232.55.79 1.9.86 2.038.07.138.115.297.022.47-.091.173-.136.296-.273.456-.14.16-.296.36-.422.48-.14.136-.287.283-.123.555.163.273.725 1.194 1.555 1.937 1.07.954 1.96 1.253 2.233 1.392.273.138.434.123.593-.073.16-.205.678-.79.86-1.06.182-.272.365-.223.61-.136.24.089 1.52.715 1.783.844.266.13.45.205.518.32.07.114.07.663-.204 1.434z"/>
-        </svg>
-    </a>
+    <svg class="icon-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 2400"><path d="M1200 0C537.9 0 0 537.9 0 1200c0 593.8 432.4 1085.6 1003.4 1181.5V1536h-300v-336h300v-255.4c0-297.4 178.3-460.6 448.7-460.6 130.1 0 266.3 23.3 266.3 23.3v293h-150c-147.6 0-193.7 91.7-193.7 185.8V1200h330l-52.8 336h-277.2v845.5C1967.6 2285.6 2400 1793.8 2400 1200 2400 537.9 1862.1 0 1200 0z"/></svg>
+    <svg class="icon-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 2400"><path d="M1200 0C537.9 0 0 537.9 0 1200c0 593.8 432.4 1085.6 1003.4 1181.5V1536h-300v-336h300v-255.4c0-297.4 178.3-460.6 448.7-460.6 130.1 0 266.3 23.3 266.3 23.3v293h-150c-147.6 0-193.7 91.7-193.7 185.8V1200h330l-52.8 336h-277.2v845.5C1967.6 2285.6 2400 1793.8 2400 1200 2400 537.9 1862.1 0 1200 0z"/></svg>
+    <svg class="icon-whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 0c-8.8 0-16 7.2-16 16 0 2.8 0.7 5.5 2.1 7.9l-2.2 6.5 6.7-2.2c2.3 1.2 4.9 1.8 7.5 1.8 8.8 0 16-7.2 16-16s-7.2-16-16-16zM23.1 22.9c-0.3 0.8-1.7 1.5-2.4 1.6-0.6 0.1-1.3 0.1-2-0.1-0.5-0.1-1.1-0.3-1.8-0.6-3.2-1.4-5.3-4.5-5.5-4.7-0.2-0.2-1.3-1.7-1.3-3.3s0.8-2.3 1.1-2.6c0.3-0.3 0.6-0.3 0.8-0.3 0.2 0 0.4 0 0.6 0.1 0.2 0.1 0.5 0.1 0.7 0.6 0.3 0.5 0.9 1.8 1 1.9 0.1 0.1 0.1 0.3 0 0.4-0.1 0.1-0.2 0.3-0.3 0.4-0.1 0.1-0.2 0.2-0.3 0.4-0.1 0.1-0.2 0.2-0.1 0.4 0.1 0.2 0.4 0.7 0.8 1.1 0.5 0.6 1.1 1.1 1.8 1.5 0.3 0.2 0.6 0.3 0.8 0.5 0.1 0.1 0.2 0.2 0.4 0.3 0.2 0.1 0.3 0.1 0.5-0.1 0.2-0.2 0.6-0.7 0.8-1 0.2-0.3 0.3-0.2 0.5-0.1 0.2 0.1 1.2 0.6 1.4 0.7 0.2 0.1 0.3 0.1 0.4 0.1 0.2 0.1 0.4 0.1 0.5 0.2 0.1 0.3 0.1 0.7-0.1 1z"></path></svg>
 
     <!-- HTML para alerta personalizado -->
     <div class="custom-alert" id="customAlert">
@@ -296,17 +290,34 @@
     </div>
 
     <script>
-        // Animação de entrada e saída do título
-        const headerTitle = document.querySelector('header h1');
-        let isOriginalTitle = true;
-        
-        function animateTitle() {
-            headerTitle.style.animationName = isOriginalTitle ? 'slideTitleOut' : 'slideTitleIn';
-            isOriginalTitle = !isOriginalTitle;
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                showCustomAlert("Internet ilimitada só aqui");
+            }, 100);
+        });
+
+        function showCustomAlert(message) {
+            const alertBox = document.getElementById('customAlert');
+            alertBox.querySelector('p').textContent = message;
+            alertBox.style.display = 'block';
         }
 
-        // Troca os títulos a cada 3 segundos
-        setInterval(animateTitle, 3000);
+        function closeCustomAlert() {
+            const alertBox = document.getElementById('customAlert');
+            alertBox.style.animation = 'fadeOut 0.5s forwards';
+            setTimeout(() => {
+                alertBox.style.display = 'none';
+            }, 500);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const header = document.querySelector("header h1");
+            header.style.animationName = "slideTitleIn";
+
+            setTimeout(function() {
+                header.style.animationName = "slideTitleOut";
+            }, 5000);
+        });
     </script>
 </body>
 </html>

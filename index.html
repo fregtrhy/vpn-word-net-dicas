@@ -580,23 +580,20 @@ Seja feliz!
 
     <script>
         window.addEventListener('load', function() {
-            setTimeout(function() {
-                showCustomAlert("Se você esta navegando através do nosso aplicativo os downloads não podem esta disponível, recomendo usar seu navegador para baixar os aplicativos que estão disponíveis aqui ou você pode ir em nosso grupo de dicas Telegram.<br><br>
+        setTimeout(function() {
+            showCustomAlert("Se você esta navegando através do nosso aplicativo os downloads não podem esta disponível, recomendo usar seu navegador para baixar os aplicativos que estão disponíveis aqui ou você pode ir em nosso grupo de dicas Telegram.<br><br>⚠️ 𝘁𝗲𝗿𝗺𝗼𝘀<br>Partir do 𝟬𝟲/𝟬𝟳/𝟮𝟯 decidir não ter mais devolução! Só compre se souber como funciona esse mudo de Internet gambiarra, temos 1 bot teste bem antes de comprar.<br><br>⚠️ 𝗼𝗯𝘀𝗲𝗿𝘃𝗲𝗺 meu trabalho é manter servidor ativo e desbloqueio das operadoras atualizado.<br><br>⭐️ 𝗩𝗣𝗡 𝗪𝗢𝗥𝗗 𝗡𝗘𝗧™ 𝘁𝗼𝗱𝗼𝘀 𝗱𝗶𝗿𝗲𝗶𝘁𝗼𝘀 𝗿𝗲𝘀𝗲𝗿𝘃𝗮𝗱𝗼𝘀 © 𝟮𝟬𝟭𝟵-𝟮𝟬𝟮𝟰™");
+        }, 100);
+    });
 
-⚠️ 𝘁𝗲𝗿𝗺𝗼𝘀
-Partir do 𝟬𝟲/𝟬𝟳/𝟮𝟯 decidir não ter mais devolução! Só compre se souber como funciona esse mudo de Internet gambiarra, temos 1 bot teste bem antes de comprar.<br><br>
+    function showCustomAlert(message) {
+        const alertBox = document.getElementById('customAlert');
+        alertBox.querySelector('p').innerHTML = message;
+        alertBox.style.display = 'block';
+    }
 
-⚠️ 𝗼𝗯𝘀𝗲𝗿𝘃𝗲𝗺 meu trabalho é manter servidor ativo e desbloqueio das operadoras atualizado.<br><br>
-
-⭐️ 𝗩𝗣𝗡 𝗪𝗢𝗥𝗗 𝗡𝗘𝗧™ 𝘁𝗼𝗱𝗼𝘀 𝗱𝗶𝗿𝗲𝗶𝘁𝗼𝘀 𝗿𝗲𝘀𝗲𝗿𝘃𝗮𝗱𝗼𝘀 © 𝟮𝟬𝟭𝟵-𝟮𝟬𝟮𝟰™");
-            }, 100);
-        });
-
-        function showCustomAlert(message) {
-            const alertBox = document.getElementById('customAlert');
-            alertBox.querySelector('p').textContent = message;
-            alertBox.style.display = 'block';
-        }
+    function closeCustomAlert() {
+        document.getElementById('customAlert').style.display = 'none';
+    }
 
         function closeCustomAlert() {
             document.getElementById('customAlert').style.display = 'none';

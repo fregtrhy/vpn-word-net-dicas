@@ -152,17 +152,22 @@
         /* Estilos para o alerta */
         .custom-alert {
             position: fixed;
-            top: 10%;
-            left: 5%;
-            width: 90%;
-            max-height: 80%;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            width: 80%;
+            max-width: 400px;
+            max-height: 70%;
             overflow-y: auto;
-            background-color: white;
+            background-color: #fff;
             border: 1px solid #ccc;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 15px;
+            padding: 20px;
             z-index: 1000;
             border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
         }
 
         /* Estilos para o botão de fechar */
@@ -171,13 +176,13 @@
             top: 10px;
             right: 10px;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 18px;
+            color: #888;
         }
 
-        /* Estilos para melhorar a legibilidade do texto */
+        /* Estilos para os parágrafos dentro do alerta */
         .custom-alert p {
-            margin: 10px 0;
-            line-height: 1.5;
+            margin: 0 0 10px;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -563,7 +568,7 @@ Seja feliz!
         </section>
     </main>
     <footer>
-         𝗩𝗣𝗡 𝗪𝗢𝗥𝗗 𝗡𝗘𝗧™ 𝘁𝗼𝗱𝗼𝘀 𝗱𝗶𝗿𝗲𝗶𝘁𝗼𝘀 𝗿𝗲𝘀𝗲𝗿𝘃𝗮𝗱𝗼𝘀 © 𝟮𝟬𝟭𝟵-𝟮𝟬𝟮𝟰™ <br> 𝙬𝙤𝙧𝙙 𝙣𝙚𝙩 𝙥𝙧𝙤𝙜𝙧𝙖𝙢𝙖𝙙𝙤𝙧 𝙩𝙚𝙘𝙝𝙣𝙤𝙡𝙤𝙜𝙮 ©
+         𝗩𝗣𝗡 𝗪𝗢𝗥𝗗 𝗡𝗘𝗧™ 𝘁𝗼𝗱𝗼𝘀 𝗱𝗶𝗿𝗲𝗶𝘁𝗼𝘀 𝗿𝗲𝘀𝗲𝗿𝘃𝗮𝗱𝗼𝘀 © 𝟮𝟬𝟭𝟵-𝟮𝟬𝟮𝟰™ <br> 𝙥𝙧𝙤𝙜𝙧𝙖𝙢𝙖𝙙𝙤𝙧 𝙩𝙚𝙘𝙝𝙣𝙤𝙡𝙤𝙜𝙮©
     </footer>
     <svg class="icon-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 2400"><path d="M1200 0C537.9 0 0 537.9 0 1200c0 593.8 432.4 1085.6 1003.4 1181.5V1536h-300v-336h300v-255.4c0-297.4 178.3-460.6 448.7-460.6 130.1 0 266.3 23.3 266.3 23.3v293h-150c-147.6 0-193.7 91.7-193.7 185.8V1200h330l-52.8 336h-277.2v845.5C1967.6 2285.6 2400 1793.8 2400 1200 2400 537.9 1862.1 0 1200 0z"/></svg>
     <svg class="icon-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 2400"><path d="M1200 0C537.9 0 0 537.9 0 1200c0 593.8 432.4 1085.6 1003.4 1181.5V1536h-300v-336h300v-255.4c0-297.4 178.3-460.6 448.7-460.6 130.1 0 266.3 23.3 266.3 23.3v293h-150c-147.6 0-193.7 91.7-193.7 185.8V1200h330l-52.8 336h-277.2v845.5C1967.6 2285.6 2400 1793.8 2400 1200 2400 537.9 1862.1 0 1200 0z"/></svg>
@@ -584,7 +589,7 @@ Seja feliz!
             };
 
             // Adicionar o conteúdo da mensagem
-            alertDiv.innerHTML = '<p>' + message + '</p>';
+            alertDiv.innerHTML = message;
             alertDiv.appendChild(closeButton);
 
             // Adicionar o alerta ao corpo do documento
@@ -596,6 +601,7 @@ Seja feliz!
                 showCustomAlert("Se você está navegando através do nosso aplicativo, os downloads podem não estar disponíveis. Recomendo usar seu navegador para baixar os aplicativos que estão disponíveis aqui ou você pode ir em nosso grupo de dicas no Telegram.<br><br>⚠️ 𝘁𝗲𝗿𝗺𝗼𝘀<br>A partir de 𝟬𝟲/𝟬𝟳/𝟮𝟯 decidi não ter mais devolução! Só compre se souber como funciona esse mundo de Internet gambiarra, teste bem antes de comprar.<br><br>⚠️ 𝗼𝗯𝘀𝗲𝗿𝘃𝗲𝗺 meu trabalho é manter servidor ativo e desbloqueio das operadoras atualizado.<br><br>⭐️ 𝗩𝗣𝗡 𝗪𝗢𝗥𝗗 𝗡𝗘𝗧™ 𝘁𝗼𝗱𝗼𝘀 𝗱𝗶𝗿𝗲𝗶𝘁𝗼𝘀 𝗿𝗲𝘀𝗲𝗿𝘃𝗮𝗱𝗼𝘀 © 𝟮𝟬𝟭𝟵-𝟮𝟬𝟮𝟰™");
             }, 100);
         });
+
         // Animação de entrada e saída do título
         const headerTitle = document.querySelector('header h1');
         let isOriginalTitle = true;

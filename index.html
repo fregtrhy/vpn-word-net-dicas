@@ -621,17 +621,29 @@ Seja feliz!
             }, 100);
         });
 
-        // Animação de entrada e saída do título
-        const headerTitle = document.querySelector('header h1');
-        let isOriginalTitle = true;
-        
-        function animateTitle() {
-            headerTitle.style.animationName = isOriginalTitle ? 'slideTitleOut' : 'slideTitleIn';
-            isOriginalTitle = !isOriginalTitle;
+        // JavaScript para controlar a transição do título em loop
+        const header = document.querySelector('header h1');
+        const titles = ["Bem-vindo ao site Word Net", "Dicas em vídeo", "Dicas em inscrita", "Seguem nas redes social", "Não esqueça nos compartilhar"];
+        let currentIndex = 0;
+
+        function animateTitleOut() {
+            header.style.animationName = 'slideTitleOut';
+            setTimeout(() => {
+                header.textContent = titles[currentIndex];
+                animateTitleIn();
+            }, 1000); // Tempo para esperar antes de trocar o texto
         }
 
-        // Troca os títulos a cada 3 segundos
-        setInterval(animateTitle, 2000);
+        function animateTitleIn() {
+            header.style.animationName = 'slideTitleIn';
+            currentIndex = (currentIndex + 1) % titles.length;
+            setTimeout(() => {
+                animateTitleOut();
+            }, 3000); // Tempo de exibição do título antes de trocar novamente (alterado para 5 segundos)
+        }
+
+        // Iniciar a animação
+        animateTitleOut();
     </script>
 </body>
 </html>

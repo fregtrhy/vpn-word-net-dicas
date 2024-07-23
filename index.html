@@ -161,7 +161,7 @@
             overflow-y: auto;
             background-color: #fff;
             border: 1px solid #ccc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             z-index: 1000;
             border-radius: 8px;
@@ -169,7 +169,18 @@
             font-size: 14px;
             line-height: 1.4;
             opacity: 0; /* Inicialmente invisível */
-            transition: opacity 1.2s ease; /* Transição suave */
+            transition: opacity 0.5s ease; /* Transição suave */
+            animation: pulse 2s infinite; /* Animação de borda */
+        }
+
+        /* Animação de pulso */
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 0, 0, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(255, 0, 0, 0.8);
+            }
         }
 
         /* Estilos para o botão de fechar */
